@@ -10,6 +10,7 @@
     <!-- include only the Firebase features as you need -->
     <script defer src="/__/firebase/7.8.0/firebase-auth.js"></script>
     <script defer src="/__/firebase/7.8.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.8.0/firebase-firestore.js"></script> <!-- changed to firestore to match tutorial -->
     <script defer src="/__/firebase/7.8.0/firebase-messaging.js"></script>
     <script defer src="/__/firebase/7.8.0/firebase-storage.js"></script>
     <!-- initialize the SDK after all desired features are loaded -->
@@ -31,13 +32,22 @@
     </style>
   </head>
   <body>
-
+    <script src="app.js"></script>
+    
     <button onclick="googleLogin()">
         Login with Google
     </button>
 
-    <script src="app.js">
+    <h1>Bobby's Intro Project</h1>
 
-    </script>
+    <h3>Storage Uploads</h3>
+    <p>Upload an image!</p>
+    
+    <input type="file" onchange="uploadFile(this.files)">
+
+    <hr>
+
+    <img id="imgUpload" src="" width="100vw">
+
   </body>
 </html>
